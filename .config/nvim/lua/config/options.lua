@@ -1,42 +1,65 @@
--- options
---------------------------------------------------------------------------------
--- Relative and absolute line numbers combined
-vim.opt.number = true
-vim.opt.relativenumber = true
+local opt = vim.opt
+local g = vim.g
 
--- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+-- line numbers
+opt.number = true
+opt.relativenumber = false
 
--- Cursorline
-vim.opt.cursorline = true
+-- tabs & indentation
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
 
--- Show whitespace characters
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- wrapping
+opt.wrap = true
 
--- Search
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+-- search
+opt.ignorecase = true
+opt.smartcase = true
+opt.hlsearch = false
 
--- Preview substitutions
-vim.opt.inccommand = 'split'
+-- cursor
+opt.cursorline = true
 
--- Text wrapping
-vim.opt.wrap = true
-vim.opt.breakindent = true
+-- appearance
+opt.termguicolors = true
+opt.background = "dark"
+opt.signcolumn = "yes"
+opt.colorcolumn = ""
+opt.cmdheight = 0
+opt.scrolloff = 10
+opt.winborder = "rounded"
 
--- Tabstops
-vim.opt.expandtab = true
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+-- show empty lines as blank
+opt.fillchars = { eob = " " }
 
--- Window splitting
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+-- behavior
+opt.hidden = false
+opt.errorbells = false
+opt.backup = false
+opt.swapfile = false
+opt.undofile = true
+opt.undodir = vim.fn.expand("~/.vim/undodir")
+opt.backspace = "indent,eol,start"
+opt.autochdir = false
+opt.modifiable = true
 
--- Save undo history
-vim.opt.undofile = true
+-- completion
+opt.completeopt = { "menuone", "noselect", "noinsert" }
 
--- Set the default border for all floating windows
-vim.opt.winborder = 'rounded'
+-- keyword behavior
+opt.iskeyword:append("-")
+
+-- mouse
+opt.mouse = "a"
+
+-- clipboard
+opt.clipboard:append("unnamedplus")
+
+-- splits
+opt.splitright = true
+opt.splitbelow = true
+
+-- encoding
+opt.encoding = "utf-8"
