@@ -4,7 +4,7 @@ require("mason").setup()
 -- mason-lspconfig
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "bashls", "clangd", "cmake", "cssls",
+        "bashls", "clangd", "cssls",
         "emmet_language_server", "gopls", "html",
         "jsonls", "lua_ls", "marksman",
         "pyright", "rust_analyzer", "yamlls",
@@ -38,7 +38,7 @@ require("fidget").setup()
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local configs = require("lspconfig.configs")
 local servers = {
-    "html", "lua_ls", "bashls", "clangd", "cmake", "cssls",
+    "html", "lua_ls", "bashls", "clangd", "cssls",
     "emmet_language_server", "gopls", "jsonls",
     "marksman", "pyright", "rust_analyzer", "yamlls",
 }
