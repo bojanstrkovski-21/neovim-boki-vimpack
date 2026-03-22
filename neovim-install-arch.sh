@@ -30,8 +30,9 @@ fi
 # Remove any existing pacman-managed neovim versions if found
 for pkg in neovim neovim-git neovim-bin neovim-nightly-bin; do
   if pacman -Qi "$pkg" &>/dev/null; then
-    warn "Found pacman-managed $pkg, removing it..."
-    sudo pacman -Rns --noconfirm "$pkg"
+    actual=$(pacman -Qi "$pkg" | grep "^Name" | awk '{print $3}')
+    warn "Found $actual, removing it..."
+    yay -Rns --noconfirm "$actual"
   fi
 done
 
