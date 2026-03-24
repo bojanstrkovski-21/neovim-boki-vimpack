@@ -103,7 +103,7 @@ sudo pacman -Syy --needed --noconfirm \
   lua-jsregexp \
   luarocks \
   luajit \
-  juia \
+  julia \
   jdk-openjdk \
   xclip
 
