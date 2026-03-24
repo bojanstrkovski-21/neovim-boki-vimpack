@@ -4,7 +4,7 @@ local parsers = {
   "toml", "yaml", "json", "jsonc",
   "typst", "vim", "vimdoc",
   "css", "html", "cmake",
-  "typescript", "javascript",
+  "typescript", "javascript", "regex",
   "rust", "fish", "astro", "rasi",
 }
 
