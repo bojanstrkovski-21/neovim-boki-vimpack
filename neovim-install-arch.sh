@@ -85,16 +85,27 @@ sudo pacman -Syy --needed --noconfirm \
   fd \
   fzf \
   ripgrep \
+  ripgrep-all \
   make \
   cmake \
   python \
+  python-pynvim \
   python-pip \
+  python-pipx \
   ruby \
   composer \
   nvm \
   tree-sitter \
   rustup \
-  go
+  go \
+  viu \
+  chafa \
+  lua-jsregexp \
+  luarocks \
+  luajit \
+  juia \
+  jdk-openjdk \
+  xclip
 
 # =============================================================================
 # yay (from chaotic-aur via pacman)
@@ -133,6 +144,29 @@ nvm install node
 
 info "Updating npm to latest..."
 npm install -g npm@latest
+npm install -g neovim
+
+# =============================================================================
+# ruby neovim
+# =============================================================================
+
+gem install neovim
+
+# =============================================================================
+# Perl + cpanminus + cpanm neovim
+# =============================================================================
+sudo pacman -S --needed --noconfirm perl
+
+# System wide
+curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+
+# Local User wide
+curl -L https://cpanmin.us | perl - App::cpanminus
+
+cpanm -n Neovim::Ext
+
+sudo cpanm -n Neovim::Ext
+
 
 # =============================================================================
 # Done
