@@ -52,7 +52,7 @@ opt.completeopt = { "menuone", "noselect", "noinsert" }
 opt.iskeyword:append("-")
 
 -- mouse
-opt.mouse = "a"
+opt.mouse = ""
 
 -- clipboard
 opt.clipboard:append("unnamedplus")
